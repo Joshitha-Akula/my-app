@@ -28,7 +28,7 @@ jobs:
 
       - name: Test Application
         run: |
-          curl --fail http://localhost:3000
+          timeout 10 curl --fail  http://localhost:3000
 
       - name: Stop Application
         if: always()
